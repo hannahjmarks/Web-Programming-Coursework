@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* Style sheet for task 4 */
+
+body{
+	/*main style for view.php and rankings.php*/
+	background: linear-gradient(to bottom, #FF9731 0%,#ffff32 19%,#a9ff32 39%,#30ffe6 59%,#b2fff4 74%,#ddfffa 84%,#ffffff 94%);
+	font-size: 30pt;
+	text-align: left;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+div.rank{
+	/*style for the divs displaying the rank and information for each country*/
+	width: 1000px;
+	background: #FFFFFF;
+	border: 60px solid transparent;
+	border-image: url("border.png") 60 round;
+	background-clip: padding-box;
+	margin: 30px;
+}
+div.rankOuter{
+	/*makes the rank divs display in a center aligned column so as to be easier to read/more user friendly*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+}
+div.form{
+	/*center aligns the contents of the form in view.php*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 250px;
+}
+div.backButton{
+	/*fixes the back button on rankings.php to the upper right corner*/
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+div.medal{
+	/*style for the medal table on each of the ranked country divs*/
+	display: inline-block;
+	float: right;
+	border-collapse: collapse;
+	border-radius: 4px;
+	border: 1px solid #FFFFFF;
+}
+form.form{
+	/*style for the form in view.php*/
+	display: inline-block;
+	background:#FFFFFF;
+	border: 100px solid transparent;
+	border-image: url("border.png") 60 round;
+	background-clip: padding-box;
+	padding: 50px;
+}
+.button{
+	/*style for buttons in both view.php and rankings.php*/
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size: 20pt;
+	background-color:#969696;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 4px;
+	/*sets time for the transition when the users cursor hovers over the button*/
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+	
+}
+.button:hover{
+	/*darkens the background colour and extends the button to the right when the cursor hovers over it*/
+	background-color:#535353;
+	padding-right: 45px;
+}
+.button:hover span:after{
+	/*sets the style for after the transition is completed*/
+	opacity: 1;
+	right:auto;
+}
+.button span{
+	/*changes cursor to pointer on hover and sets the span transition*/
+	display: inline-block;
+	cursor: pointer;
+	transition: 0.5s;
+	position: relative;
+}
+.button span:after{
+	/*sets the button style/content for after the transition has completed*/
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+p.countryName{
+	/*used to display the country name in the rank div*/
+	font-size: 40pt;
+	vertical-align: top;
+}
+table.rank{
+	/*sets the vertical alignment for the table layout within the rank divs*/
+	width: 100%;
+	vertical-align: top;
+}
+
+table.medal{
+	/*sets style for the medal table on each rank div*/
+	font-size: 30pt;
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 7px solid #FFFFFF;
+	border-radius: 24px;
+	
+}
+table.medal th:first-child{
+	/*sets column colour for gold medals*/
+	background-color:#FFE290;
+}
+table.medal th:nth-child(2){
+	/*sets column colour for silver medals*/
+	background-color:#C8C8C8;
+}
+table.medal th:nth-child(3){
+	/*sets column colour for bronze medals*/
+	background-color:#FCC295;
+}
+table.medal th:last-child{
+	/*sets column colour for the total medals*/
+	background-color:#B7FAFF;
+}
+table.cyclists{
+	/*sets style for the cyclist table on each of the rank divs*/
+	font-size: 20pt;
+	border-collapse:separate;
+	border-spacing: 0;
+	border: 10px solid #FFFFFF;
+	border-radius: 24px;
+	width: 100%;
+}
+/*the folowing 4 styles alternate the colours of the columns in the cyclist tables to make them easier to read*/
+table.cyclists th:nth-child(even){
+	border-right:2px solid #FFFFFF;
+	background: #FFEFB7;
+	cursor: pointer;
+}
+table.cyclists th:nth-child(odd){
+	border-right:2px solid #FFFFFF;
+	background: #B7FAFF;
+	cursor: pointer;
+}
+table.cyclists td:nth-child(even){
+	border-right:2px solid #FFFFFF;
+	background: #FFFADF;
+}
+table.cyclists td:nth-child(odd){
+	border-right:2px solid #FFFFFF;
+	background: #DFFCFF;
+}

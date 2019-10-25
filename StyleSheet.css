@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* Style sheet for tasks 1 - 3 */
+
+body{
+	/*main style consistent through tasks 1 - 3*/
+	background-color:#FFFFFF;
+	font-size: 14pt;
+	text-align: left;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+div.table_task1{
+	/*style for tables in tasks 1- 3*/
+	display: inline-block;
+	background-color: aliceblue;
+	border-collapse: collapse;
+	border-style: groove;
+	border-color: #000F47;
+	border-width: thick;
+}
+div.rotate{
+	/*rotates row headers on tables in order to save space*/
+	transform: rotate(-90.0deg);
+}
+tr:first-child, tr:nth-child(2){
+	/*sets table borders for the column headers to be thicker/more defined*/
+	border-bottom: solid 2px #000000;
+}
+th{
+	/*sets table borders for the row headers to be thicker/more defined*/
+	border-right: solid 2px #000000;
+}
+
